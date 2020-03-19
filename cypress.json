@@ -1,0 +1,7 @@
+{"chromeWebSecurity": false,
+"blacklistHosts": [
+    "www.google-analytics.com",
+    "www.googletagmanager.com",
+    "translate.googleapis.com"
+    ]
+}
