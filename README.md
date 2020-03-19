@@ -4,7 +4,7 @@
 End to End testing of website using stub responses
 
 
-#Install
+# Install
 
 Clone Repository
 Open project in visual studio code
