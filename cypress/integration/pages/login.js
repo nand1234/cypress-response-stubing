@@ -19,6 +19,7 @@ class login {
   perform_login() {
     cy.get(allow_cookies).click();
     cy.get(username).type("<username>");
+    cy.get('#register_login_panel').toMatchImageSnapshot();
     cy.get(password).type("<password>");
     cy.get(login_button).click();
     cy.wait(3000);

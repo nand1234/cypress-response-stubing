@@ -14,17 +14,12 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-const { audit, prepareAudit } = require("cypress-audit");
-
+const { initPlugin } = require('cypress-plugin-snapshots/plugin');
 
 module.exports = (on, config) => {
-  on("before:browser:launch", (browser = {}, launchOptions) => {
-    prepareAudit(launchOptions);
-  });
+  initPlugin(on, config);
+  return config;
+};
 
-  on("task", {
-    audit
-  });
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-}
